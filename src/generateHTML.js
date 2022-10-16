@@ -27,8 +27,8 @@ function pageEnd() {
     <footer class="align-self-end bg-success bg-opacity-25 d-flex justify-content-center">
         <div>
             Victor Mendez 2022 | 
-            <a href="https://github.com/VictorMendez96"><img class="p-1" src="./team-profile-generator/dist/assets/github.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/victorhmendez/"><img class="p-1" src="./team-profile-generator/dist/assets/linkedin.svg" alt=""></a>
+            <a href="https://github.com/VictorMendez96" target="_blank"><img class="p-1" src="./team-profile-generator/dist/assets/github.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/victorhmendez/" target="_blank"><img class="p-1" src="./team-profile-generator/dist/assets/linkedin.svg" alt=""></a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
