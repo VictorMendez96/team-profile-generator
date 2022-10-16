@@ -34,11 +34,7 @@ function menu() {
             }
         ])
         .then((menuOption) => {
-            if(menuOption.includes('Add a new Manager')) {
-                newManager()
-            } else if (menuOption.includes('Add a new Engineer')) {
-                newEmployee()
-            }else if (menuOption.includes('Add a new Intern')) {
+            if(menuOption.includes('Add a new')) {
                 newEmployee()
             } else {
                 generateHTML(team)
@@ -48,43 +44,43 @@ function menu() {
 };
 
 // Function to add a new Manager to the team
-function newManager() {
-    inquirer
-        .prompt([
-            {
-                name: 'name',
-                type: 'input',
-                message: '',
-                default: ''
-            },
-            {
-                name: 'id',
-                type: 'input',
-                message: '',
-                default: ''
-            },
-            {
-                name: 'email',
-                type: 'input',
-                message: '',
-                default: ''
-            },
-            {
-                name: 'officeNumber',
-                type: 'input',
-                message: '',
-                default: ''
-            },
-        ])
-        .then((responses) => {
-            menu()
-        })
-        .catch((error) => {
-            if(error === interruptedPrompt.EVENT_INTERRUPTED) {
-                console.log('Exited to Menu :)');
-            }
-        })
-};
+// function newManager() {
+//     inquirer
+//         .prompt([
+//             {
+//                 name: 'name',
+//                 type: 'input',
+//                 message: 'Enter the name of the new employee: ',
+//                 default: ''
+//             },
+//             {
+//                 name: 'id',
+//                 type: 'input',
+//                 message: 'Enter their new ID number: ',
+//                 default: ''
+//             },
+//             {
+//                 name: 'email',
+//                 type: 'input',
+//                 message: 'Enter their email: ',
+//                 default: ''
+//             },
+//             {
+//                 name: 'officeNumber',
+//                 type: 'input',
+//                 message: '',
+//                 default: ''
+//             },
+//         ])
+//         .then((responses) => {
+//             menu()
+//         })
+//         .catch((error) => {
+//             if(error === interruptedPrompt.EVENT_INTERRUPTED) {
+//                 console.log('Exited to Menu :)');
+//             }
+//         })
+// };
 
 // Function to add a new Engineer to the team
 function newEmployee() {
@@ -93,33 +89,74 @@ function newEmployee() {
             {
                 name: 'name',
                 type: 'input',
-                message: '',
-                default: ''
+                message: 'Enter the name of the new employee: ',
+                default: 'John Smith'
             },
             {
                 name: 'id',
                 type: 'input',
-                message: '',
-                default: ''
+                message: 'Enter their new ID number: ',
+                default: '1234'
             },
             {
                 name: 'email',
                 type: 'input',
-                message: '',
-                default: ''
+                message: 'Enter their email: ',
+                default: 'someone@example.com'
             },
             {
                 name: 'role',
                 type: 'input',
-                message: '',
-                default: ''
+                message: 'Enter their role on the team: ',
+                default: 'manager, engineer, or intern?'
             },
         ])
         .then(function ({name, id, email, role}) {
-            if (role === 'engineer') {
-                menu()
+            if (role === 'manager') {
+                inquirer
+                    .prompt([
+                        {
+                            name: 'officeNumber',
+                            type: 'input',
+                            message: 'Enter their new office number: ',
+                            default: ''
+                        }
+                    ])
+                    .then(function ({ officeNumber }) {
+                        employee = new Manager(name, id, email, officeNumber);
+                        team.push(employee);
+                        menu();
+                    })
+            } else if (role === 'engineer'){
+                inquirer
+                    .prompt([
+                        {
+                            name: 'github',
+                            type: 'input',
+                            message: 'Enter their GitHub: ',
+                            default: 'VictorMendez96'
+                        }
+                    ])
+                    .then(function ({ github }) {
+                        employee = new Engineer(name, id, email, github);
+                        team.push(employee);
+                        menu();
+                    })
             } else {
-                menu()
+                inquirer
+                    .prompt([
+                        {
+                            name: 'school',
+                            type: 'input',
+                            message: 'Enter the school they are/were attending: ',
+                            default: 'Denver University'
+                        }
+                    ])
+                    .then(function ({ school }) {
+                        employee = new Intern(name, id, email, school);
+                        team.push(employee);
+                        menu();
+                    })
             }
         })
         .catch((error) => {
