@@ -19,12 +19,29 @@ function newManager() {
     inquirer
         .prompt([
             {
-                name: '',
+                name: 'name',
                 type: 'input',
                 message: '',
-                default: ''
-                
-            };
+                default: '',
+            },
+            {
+                name: 'id',
+                type: 'input',
+                message: '',
+                default: '',
+            },
+            {
+                name: 'email',
+                type: 'input',
+                message: '',
+                default: '',
+            },
+            {
+                name: 'officeNumber',
+                type: 'input',
+                message: '',
+                default: '',
+            },
         ]);
 };
 
