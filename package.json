@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/VictorMendez96/team-profile-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "inquirer-interrupted-prompt": "^2.0.1"
   },
   "devDependencies": {
     "jest": "^29.2.0"
