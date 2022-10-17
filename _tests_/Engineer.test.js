@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer');
 
 describe('Engineer', () => {
-    test('Engineer extend class', () => {
+    test('Engineer extends Employee class', () => {
         const github = 'testgithub'
         const employee = new Engineer('John', '4890', 'John@test.com', github)
         expect(employee.github).toBe(github)
