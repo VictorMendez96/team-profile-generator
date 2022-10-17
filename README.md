@@ -1,13 +1,23 @@
-# team-profile-generator
+# Team Profile Generator
 
-User Story 
+
+## Table of Contents
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+
+## Description
+#### User Story 
 
 AS A manager
 I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 
 
-Acceptance Criteria
+#### Acceptance Criteria
 
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
@@ -27,6 +37,25 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 
-Deployment Link: 
 
-Github Link:
+## Installation
+Download program to your computer > Open a terminal and go into program folder > run a 'npm i' to install all dependencies
+
+
+## Usage
+Once you have installed the program. Run a 'node index.js' in your terminal while in the program folder. The program will begin and you will see the menu. Add as many employees as necessary and then choose done. You will be notified when the team profile has been generated. You can retrieve the HTML file from the dist/ folder. For more details, watch my tutorial provided below. 
+
+## Application Screenshots
+![Start](./dist/assets/program-start.png)
+![Input](./dist/assets/employee-added.png)
+![Generated](./dist/assets/profile-ready.png)
+![Sample](./dist/assets/sample-profile.png)
+
+## Tests
+Tests were created with jest. After the program has been installed you can run the command 'npm run test' from the terminal in the program, folder for testing
+
+
+## Application Links
+[GitHub](https://github.com/VictorMendez96/readme-generator)
+
+[Video Walk-through](https://drive.google.com/file/d/1GlUPmDELzNFoMjaaNpwdIRG5cHypWRMv/view)

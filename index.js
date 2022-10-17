@@ -83,7 +83,7 @@ function newEmployee() {
                             name: 'officeNumber',
                             type: 'input',
                             message: 'Enter their new office number: ',
-                            default: ''
+                            default: '1018'
                         }
                     ])
                     .then(function ({ officeNumber }) {
