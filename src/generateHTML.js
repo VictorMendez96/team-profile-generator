@@ -112,7 +112,7 @@ function employeeCard(employee) {
                 </div>
                 <div class="list-group-item">
                   <img class="p-1" src="./assets/book-half.svg" alt="">
-                  <span>School: </span>
+                  <span>School: ${employee.school}</span>
                 </div>
             </div>
         </div>
