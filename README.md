@@ -5,8 +5,9 @@
 - [Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Application Screenshots](#application-screenshots)
 - [Tests](#Tests)
-- [Questions](#Questions)
+- [Application Links](#application-links)
 
 
 ## Description
