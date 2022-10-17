@@ -52,10 +52,11 @@ Once you have installed the program. Run a 'node index.js' in your terminal whil
 ![Sample](./dist/assets/sample-profile.png)
 
 ## Tests
-Tests were created with jest. After the program has been installed you can run the command 'npm run test' from the terminal in the program, folder for testing
+Tests were created with jest. After the program has been installed you can run the command 'npm test' from the terminal in the program, folder for testing
 
 
 ## Application Links
 [GitHub](https://github.com/VictorMendez96/team-profile-generator)
 
-[Video Walk-through](https://drive.google.com/file/d/1GlUPmDELzNFoMjaaNpwdIRG5cHypWRMv/view)
+[Jest Testing Video Walk-through]()
+[Program Video Walk-through](https://drive.google.com/file/d/1GlUPmDELzNFoMjaaNpwdIRG5cHypWRMv/view)
