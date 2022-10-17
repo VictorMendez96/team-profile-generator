@@ -38,11 +38,12 @@ function pageEnd() {
 
 function employeeCard(employee) {
     const role = employee.getRole();
+    console.log(role)
     if (role === 'Manager') {
         return `<div class="container d-flex flex-wrap justify-content-evenly">
         <div class="card d-flex order-first m-4" style="max-width: 18rem;">
             <div class="card-header text-bg-success bg-gradient d-flex">
-                <img class ="p-2" src=".assets/person-workspace.svg" alt="">
+                <img class ="p-2" src="./assets/person-workspace.svg" alt="">
                 <div class="d-flex flex-column p-2">
                     <span>${employee.name}</span>
                     <span>${role}</span>
@@ -68,7 +69,7 @@ function employeeCard(employee) {
     } else if (role === 'Engineer') {
         return `<div class="card d-flex m-4" style="max-width: 18rem;">
         <div class="card-header bg-warning bg-gradient text-white d-flex">
-            <img class ="p-2" src="./team-profile-generator/dist/assets/wrench-adjustable-circle.svg" alt="">
+            <img class ="p-2" src="./assets/wrench-adjustable-circle.svg" alt="">
             <div class="d-flex flex-column p-2">
                 <span>${employee.name}</span>
                 <span>${role}</span>
@@ -94,7 +95,7 @@ function employeeCard(employee) {
     } else {
         return `<div class="card d-flex m-4 order-last" style="max-width: 18rem;">
         <div class="card-header bg-danger bg-gradient text-white d-flex">
-            <img class ="p-2" src="./team-profile-generator/dist/assets/pencil.svg" alt="">
+            <img class ="p-2" src="./assets/pencil.svg" alt="">
             <div class="d-flex flex-column p-2">
                 <span>${employee.name}</span>
                 <span>${role}</span>
@@ -120,12 +121,21 @@ function employeeCard(employee) {
     }
 };
 
+function generateBody(employees) {
+    let body = "";
+    employees.forEach(employee => {
+        console.log(employee)
+        let div = employeeCard(employee)
+        body = body.concat(" ", div)
+    });
+    return body;
+};
+
 function generateHTML(employees) {
+    console.log(employees)
     return `${pageStart()}
-    ${employees.forEach(employee => {
-        employeeCard(employee)
-    })}
-    ${pageEnd()}`
+        ${generateBody(employees)}
+        ${pageEnd()}`
 };
 
 module.exports = generateHTML;

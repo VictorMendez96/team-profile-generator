@@ -12,7 +12,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 // Initiate inquirer interrupted prompt for prompts
-inquirer.registerPrompt('input', interruptedPrompt);
+// inquirer.registerPrompt('input', interruptedPrompt);
 
 // Declare variables
 const team = [];
@@ -27,60 +27,22 @@ function menu() {
     inquirer
         .prompt([
             {
-                name: 'menu',
+                name: 'menuOption',
                 type: 'list',
                 message: 'Create your team profile! Choose an option:',
                 choices: ['Add a new Manager', 'Add a new Engineer', 'Add a new Intern', 'Done! Make my new team profile!']
             }
         ])
-        .then((menuOption) => {
-            if(menuOption.includes('Add a new')) {
-                newEmployee()
-            } else {
+        .then(function({ menuOption }) {
+            // console.log(menuOption)
+            if(menuOption.includes('Done! Make my new team profile!')) {
                 generateHTML(team)
+            } else {
+                newEmployee()
             }
         })
 
 };
-
-// Function to add a new Manager to the team
-// function newManager() {
-//     inquirer
-//         .prompt([
-//             {
-//                 name: 'name',
-//                 type: 'input',
-//                 message: 'Enter the name of the new employee: ',
-//                 default: ''
-//             },
-//             {
-//                 name: 'id',
-//                 type: 'input',
-//                 message: 'Enter their new ID number: ',
-//                 default: ''
-//             },
-//             {
-//                 name: 'email',
-//                 type: 'input',
-//                 message: 'Enter their email: ',
-//                 default: ''
-//             },
-//             {
-//                 name: 'officeNumber',
-//                 type: 'input',
-//                 message: '',
-//                 default: ''
-//             },
-//         ])
-//         .then((responses) => {
-//             menu()
-//         })
-//         .catch((error) => {
-//             if(error === interruptedPrompt.EVENT_INTERRUPTED) {
-//                 console.log('Exited to Menu :)');
-//             }
-//         })
-// };
 
 // Function to add a new Engineer to the team
 function newEmployee() {
@@ -160,16 +122,14 @@ function newEmployee() {
             }
         })
         .catch((error) => {
-            if(error === interruptedPrompt.EVENT_INTERRUPTED) {
-                console.log('Exited to Menu :)');
-            }
+            console.log(error);
         })
 };
 
 // TODO: Create a function to write HTML file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Profile Created!'))
+    err ? console.log(err) : console.log('Your Team Profile is ready to view!'))
 };
 
 function generateHTML() {
