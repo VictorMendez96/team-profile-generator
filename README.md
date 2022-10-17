@@ -59,4 +59,5 @@ Tests were created with jest. After the program has been installed you can run t
 [GitHub](https://github.com/VictorMendez96/team-profile-generator)
 
 [Jest Testing Video Walk-through](https://drive.google.com/file/d/1bYiwVbsGFVPgoRxs1rfJYRMVNjxCpDdi/view)
+
 [Program Video Walk-through](https://drive.google.com/file/d/1GlUPmDELzNFoMjaaNpwdIRG5cHypWRMv/view)
