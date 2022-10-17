@@ -56,6 +56,6 @@ Tests were created with jest. After the program has been installed you can run t
 
 
 ## Application Links
-[GitHub](https://github.com/VictorMendez96/readme-generator)
+[GitHub](https://github.com/VictorMendez96/team-profile-generator)
 
 [Video Walk-through](https://drive.google.com/file/d/1GlUPmDELzNFoMjaaNpwdIRG5cHypWRMv/view)
