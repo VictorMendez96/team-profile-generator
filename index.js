@@ -19,6 +19,8 @@ const team = [];
 
 // Function for app initiation 
 function init() {
+    console.log('===========Welcome to Team Profile Builder===========')
+    console.log('   Input all your employees, and then select done!   ')
     menu();
 };
 
@@ -68,13 +70,13 @@ function newEmployee() {
             },
             {
                 name: 'role',
-                type: 'input',
+                type: 'list',
                 message: 'Enter their role on the team: ',
-                default: 'manager, engineer, or intern?'
+                choices: ['Manager', 'Engineer', 'Intern']
             },
         ])
         .then(function ({name, id, email, role}) {
-            if (role === 'manager') {
+            if (role === 'Manager') {
                 inquirer
                     .prompt([
                         {
@@ -89,7 +91,7 @@ function newEmployee() {
                         team.push(employee);
                         menu();
                     })
-            } else if (role === 'engineer'){
+            } else if (role === 'Engineer'){
                 inquirer
                     .prompt([
                         {
