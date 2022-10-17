@@ -38,7 +38,6 @@ function pageEnd() {
 
 function employeeCard(employee) {
     const role = employee.getRole();
-    console.log(role)
     if (role === 'Manager') {
         return `<div class="container d-flex flex-wrap justify-content-evenly">
         <div class="card d-flex order-first m-4" style="max-width: 18rem;">
@@ -124,7 +123,6 @@ function employeeCard(employee) {
 function generateBody(employees) {
     let body = "";
     employees.forEach(employee => {
-        console.log(employee)
         let div = employeeCard(employee)
         body = body.concat(" ", div)
     });
@@ -132,7 +130,6 @@ function generateBody(employees) {
 };
 
 function generateHTML(employees) {
-    console.log(employees)
     return `${pageStart()}
         ${generateBody(employees)}
         ${pageEnd()}`
