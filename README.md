@@ -43,7 +43,7 @@ Download program to your computer > Open a terminal and go into program folder >
 
 
 ## Usage
-Once you have installed the program. Run a 'node index.js' in your terminal while in the program folder. The program will begin and you will see the menu. Add as many employees as necessary and then choose done. You will be notified when the team profile has been generated. You can retrieve the HTML file from the dist/ folder. For more details, watch my tutorial provided below. 
+Once you have installed the program. Run a 'node index.js' in your terminal while in the program folder. The program will begin and you will see the menu. Add as many employees as necessary and then choose done. You will be notified when the team profile has been generated. You can retrieve the HTML file from the dist/ folder. For more details, watch my tutorial provided below! 
 
 ## Application Screenshots
 ![Start](./dist/assets/program-start.png)
@@ -52,11 +52,11 @@ Once you have installed the program. Run a 'node index.js' in your terminal whil
 ![Sample](./dist/assets/sample-profile.png)
 
 ## Tests
-Tests were created with jest. After the program has been installed you can run the command 'npm test' from the terminal in the program, folder for testing
+Tests were created with jest. After the program has been installed you can run the command 'jest' from the terminal in the program folder for testing. See tests demo below!
 
 
 ## Application Links
 [GitHub](https://github.com/VictorMendez96/team-profile-generator)
 
-[Jest Testing Video Walk-through]()
+[Jest Testing Video Walk-through](https://drive.google.com/file/d/1bYiwVbsGFVPgoRxs1rfJYRMVNjxCpDdi/view)
 [Program Video Walk-through](https://drive.google.com/file/d/1GlUPmDELzNFoMjaaNpwdIRG5cHypWRMv/view)
